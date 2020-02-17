@@ -1,0 +1,20 @@
+.fa {
+  position: relative;
+  text-align: center;
+  top: 30px;
+  left: 2px;
+}
+
+.modal-content {
+  margin-top: 125px;
+  margin-left: 150px;
+}
+
+.modal-header {
+  padding-left: 270px;
+}
+
+.modal-body {
+  margin-right: 75px;
+  margin-left: 150px;
+}
