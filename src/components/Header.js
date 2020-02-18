@@ -87,7 +87,7 @@ class Header extends Component {
                 </a>
                 <div className="dropdown-menu dropdown-menu-right">
                     <Link to="/login" className="dropdown-item"><i className="dripicons-user text-muted mr-2" /> Login</Link>
-                    <Link to="/register" className="dropdown-item"><i className="dripicons-lock text-muted mr-2" /> Register</Link>
+                    <Link to="/" className="dropdown-item"><i className="dripicons-lock text-muted mr-2" /> Register</Link>
                 </div>
             </li>
         )
@@ -100,7 +100,7 @@ class Header extends Component {
                     <nav className="topbar-main">
                         {/* LOGO */}
                         <div className="topbar-left">
-                            <Link to="/" className="logo">
+                            <Link to="/MyWallet" className="logo">
                                 <span>
                                     <img src="./assets/images/codeoku.png" alt="logo-small" className="logo-sm" />
                                 </span>
@@ -208,7 +208,7 @@ class Header extends Component {
                                                 <Link to="/login"><i className="dripicons-enter" />Log In</Link>
                                             </li>
                                             <li>
-                                                <Link to="/register"><i className="dripicons-pencil" />Register</Link>
+                                                <Link to="/"><i className="dripicons-pencil" />Register</Link>
                                             </li>
                                             <li>
                                                 <Link to="/recover"><i className="dripicons-clockwise" />Recover Password</Link>

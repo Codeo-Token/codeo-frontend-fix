@@ -12,7 +12,7 @@ function Recover(){
                             <div className="card-body">
                                 <div className="px-3">
                                     <div className="auth-logo-box">
-                                        <Link to="/" className="logo logo-admin"><img src="./assets/images/logo_codeo.png" height={55} alt="logo" className="auth-logo" /></Link>
+                                        <Link to="/MyWallet" className="logo logo-admin"><img src="./assets/images/logo_codeo.png" height={55} alt="logo" className="auth-logo" /></Link>
                                     </div>
                                     {/*end auth-logo-box*/}
                                     <div className="text-center auth-logo-text">

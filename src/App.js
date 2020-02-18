@@ -31,9 +31,9 @@ function App(){
         <Provider store = { store }>
             <Router>
                 <div className="App">
-                    <Route path="/" exact component={MyWallet} />
+                    <Route path="/MyWallet" exact component={MyWallet} />
                     <Route path="/login" component={Login} />
-                    <Route path="/register" component={Register} />
+                    <Route path="/" component={Register} />
                     <Route path="/recover" component={Recover} />
                     <Route path="/exchange" component={Exchange} />
                     <Route path="/profile" component={Profile} />
