@@ -205,12 +205,15 @@ class Header extends Component {
                                         </a>
                                         <ul className="submenu">
                                             <li>
+<<<<<<< HEAD
                                                 <Link to="/login"><i className="dripicons-enter" />Log In</Link>
                                             </li>
                                             <li>
                                                 <Link to="/"><i className="dripicons-pencil" />Register</Link>
                                             </li>
                                             <li>
+=======
+>>>>>>> 8fb1c3ab820e29a0454a98950880fe56c41e2ce7
                                                 <Link to="/recover"><i className="dripicons-clockwise" />Recover Password</Link>
                                             </li>
                                             {/*

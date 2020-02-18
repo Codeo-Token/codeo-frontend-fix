@@ -14,18 +14,6 @@ import Profile from './components/Profile';
 import Editprofile from './components/Editprofile';
 import Changepassword from './components/Changepassword';
 
-if(localStorage.jwtToken) {
-    setAuthToken(localStorage.jwtToken);
-    const decoded = jwt_decode(localStorage.jwtToken);
-    store.dispatch(setCurrentUser(decoded));
-  
-    const currentTime = Date.now() / 1000;
-    if(decoded.exp < currentTime) {
-      store.dispatch(logoutUser());
-      window.location.href = '/login'
-    }
-  }
-
 function App(){
     return(
         <Provider store = { store }>
