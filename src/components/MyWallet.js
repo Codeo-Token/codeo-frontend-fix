@@ -177,7 +177,7 @@ class MyWallet extends React.Component {
                               <td>01</td>
                               <td>14 Jan 2019</td>
                               <td>12:05PM</td>
-                              <td>{this.props.product.name}</td>
+                              <td>0012369584712458</td>
                               <td>
                                 <span className="badge badge-soft-danger">
                                   Sent
@@ -338,11 +338,10 @@ class MyWallet extends React.Component {
   }
 }
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   return {
-    product: state.products.product,
     auth: state.auth["isAuthenticated"]
   };
 };
 
-export default connect(mapStateToProps, {})(MyWallet);
+export default connect(mapStateToProps, null)(MyWallet);

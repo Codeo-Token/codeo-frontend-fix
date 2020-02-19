@@ -13,20 +13,33 @@ import { Provider } from 'react-redux';
 import Profile from './components/Profile';
 import Editprofile from './components/Editprofile';
 import Changepassword from './components/Changepassword';
+import PrivateRoute from './PrivateRoute';
+
+if(localStorage.jwtToken) {
+    setAuthToken(localStorage.jwtToken);
+    const decoded = jwt_decode(localStorage.jwtToken);
+    store.dispatch(setCurrentUser(decoded));
+
+    const currentTime = Date.now() / 1000;
+    if(decoded.exp < currentTime) {
+        store.dispatch(logoutUser());
+        window.location.href = '/register'
+    }
+}
 
 function App(){
     return(
         <Provider store = { store }>
             <Router>
                 <div className="App">
-                    <Route path="/MyWallet" exact component={MyWallet} />
+                <PrivateRoute path='/' exact={true} component={MyWallet} />
                     <Route path="/login" component={Login} />
-                    <Route path="/" component={Register} />
+                    <Route path="/register" component={Register} />
                     <Route path="/recover" component={Recover} />
-                    <Route path="/exchange" component={Exchange} />
-                    <Route path="/profile" component={Profile} />
-                    <Route path="/editprofile" component={Editprofile} />
-                    <Route path="/changepassword" component={Changepassword}/>
+                    <PrivateRoute path='/exchange' component={Exchange} />
+                    <PrivateRoute path='/profile' component={Profile} />
+                    <PrivateRoute path='/editprofile' component={Editprofile} />
+                    <PrivateRoute path='/changepassword' component={Changepassword} />
                 </div>
             </Router>
         </Provider>
