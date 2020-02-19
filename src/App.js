@@ -14,18 +14,6 @@ import Profile from './components/Profile';
 import Editprofile from './components/Editprofile';
 import Changepassword from './components/Changepassword';
 
-if(localStorage.jwtToken) {
-    setAuthToken(localStorage.jwtToken);
-    const decoded = jwt_decode(localStorage.jwtToken);
-    store.dispatch(setCurrentUser(decoded));
-  
-    const currentTime = Date.now() / 1000;
-    if(decoded.exp < currentTime) {
-      store.dispatch(logoutUser());
-      window.location.href = '/login'
-    }
-  }
-
 function App(){
     return(
         <Provider store = { store }>
@@ -33,7 +21,7 @@ function App(){
                 <div className="App">
                     <Route path="/" exact component={MyWallet} />
                     <Route path="/login" component={Login} />
-                    <Route path="/register" component={Register} />
+                    <Route path="/Register" component={Register} />
                     <Route path="/recover" component={Recover} />
                     <Route path="/exchange" component={Exchange} />
                     <Route path="/profile" component={Profile} />
