@@ -1837,6 +1837,10 @@ button.bg-primary:focus, button.bg-primary:hover {
   float: right;
 }
 
+.barcodeQR svg {
+  border: 5px solid #ffffff !important;
+}
+
 .card-new-op{
   background: rgba(25, 25, 25, .5) !important;
 }
